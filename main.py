@@ -15,7 +15,7 @@ app.add_middleware(
 
 @app.get("/live-score")
 def get_score():
-    url = "https://www.livescore.com/en/football/champions-league/knockout-round-play-offs/arsenal-vs-real-madrid/1461442/"
+    url = "https://www.cricbuzz.com/live-cricket-scores/115104/gt-vs-rr-23rd-match-indian-premier-league-2025"
     headers = {
         "User-Agent": "Mozilla/5.0"
     }
@@ -30,7 +30,7 @@ def get_score():
     soup = BeautifulSoup(response.content, "html.parser")
 
     # Find the HTML element that contains the score (you need to inspect the site manually)
-    score_element = soup.find("div", class_="ti")
+    score_element = soup.find("div", class_="cb-col-100 cb-col cb-col-scores")
     
     if score_element:
         return {"score": score_element.text.strip()}
