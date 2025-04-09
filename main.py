@@ -4,6 +4,8 @@ from bs4 import BeautifulSoup
 import requests
 from fastapi.middleware.cors import CORSMiddleware
 
+app = FastAPI()
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Or ["https://your-vercel-app.vercel.app"]
@@ -12,7 +14,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app = FastAPI()
+
 
 @app.get("/live-score")
 def get_score():
