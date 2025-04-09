@@ -26,7 +26,7 @@ def get_score():
     soup = BeautifulSoup(response.content, "html.parser")
 
     # Find the HTML element that contains the score (you need to inspect the site manually)
-    score_element = soup.find("div", class_="duelParticipant__score")  # Example
+    score_element = soup.find("div", class="detailScore__wrapper")  # Example
     if score_element:
         return {"score": score_element.text.strip()}
     return {"score": "Score not found"}
