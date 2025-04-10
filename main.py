@@ -15,7 +15,7 @@ app.add_middleware(
 
 @app.get("/live-score")
 def get_score():
-    url = "https://www.cricbuzz.com/live-cricket-scores/115104/gt-vs-rr-23rd-match-indian-premier-league-2025"
+    url = "https://www.cricbuzz.com/live-cricket-scores/115111/rcb-vs-dc-24th-match-indian-premier-league-2025"
     headers = {
         "User-Agent": "Mozilla/5.0"
     }
